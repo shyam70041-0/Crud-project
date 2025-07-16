@@ -1,0 +1,289 @@
+
+.our-process {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+              url('../assets/mission_vision.png') no-repeat center center/cover;
+  color: #fff;
+  padding: 5rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.our-process h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  position: relative;
+}
+
+.our-process h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #3498db;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(52, 152, 219, 0.5);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.step h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: #e0e0e0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.industries {
+  margin: 5rem 0;
+}
+
+.industries h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  position: relative;
+}
+
+.industries h3::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #3498db;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.industry-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(52, 152, 219, 0.5);
+}
+
+.industry-icon {
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+}
+
+.industry-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.industry-card p {
+  color: #e0e0e0;
+  line-height: 1.7;
+}
+
+.cta {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.cta h3 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.cta-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.cta-button:hover {
+  background: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
+}
+
+/* Services section */
+.services {
+  background: #f8f9fa;
+  padding: 5rem 0;
+  color: #333;
+  position: relative;
+  z-index: 3;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+.services h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #3498db;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.service-category {
+  background: white;
+  border-radius: 10px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-category h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: #2c3e50;
+}
+
+.service-category p {
+  color: #7f8c8d;
+  line-height: 1.7;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .step {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-process h2, .services h2 {
+    font-size: 2.2rem;
+  }
+  
+  .industries h3 {
+    font-size: 1.8rem;
+  }
+  
+  .cta h3 {
+    font-size: 1.8rem;
+  }
+  
+  .step-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .industry-grid, .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .step, .industry-card, .service-category {
+    padding: 1.5rem;
+  }
+}

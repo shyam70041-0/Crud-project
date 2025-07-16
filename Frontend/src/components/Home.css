@@ -1,0 +1,331 @@
+
+.home {
+  position: relative;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80') no-repeat center center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(20, 30, 48, 0.75) 100%);
+  z-index: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #FFD700;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #FFD700;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15%;
+}
+
+.company-name h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.company-name h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  color: #FFD700;
+}
+
+.tagline h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.tagline h3::before,
+.tagline h3::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background: #FFD700;
+}
+
+.tagline h3::before {
+  left: -60px;
+}
+
+.tagline h3::after {
+  right: -60px;
+}
+
+.description {
+  max-width: 800px;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.description p {
+  margin-bottom: 1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.btn.primary {
+  background: #FFD700;
+  color: #0A1929;
+}
+
+.btn.primary:hover {
+  background: #e6c200;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 24px;
+  height: 40px;
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  position: relative;
+}
+
+.scroll-indicator span::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: #FFD700;
+  border-radius: 2px;
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 16px);
+    opacity: 0;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .hero-content {
+    padding: 0 10%;
+  }
+  
+  .company-name h1 {
+    font-size: 2.5rem;
+  }
+  
+  .company-name h2 {
+    font-size: 1.5rem;
+  }
+  
+  .tagline h3 {
+    font-size: 1.4rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 5%;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    margin: 0.5rem 1rem;
+  }
+  
+  .company-name h1 {
+    font-size: 2rem;
+  }
+  
+  .company-name h2 {
+    font-size: 1.3rem;
+  }
+  
+  .tagline h3 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+  
+  .tagline h3::before,
+  .tagline h3::after {
+    width: 30px;
+  }
+  
+  .tagline h3::before {
+    left: -40px;
+  }
+  
+  .tagline h3::after {
+    right: -40px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0 5%;
+  }
+  
+  .company-name h1 {
+    font-size: 1.8rem;
+  }
+  
+  .tagline h3 {
+    font-size: 1.1rem;
+  }
+  
+  .tagline h3::before,
+  .tagline h3::after {
+    width: 20px;
+  }
+  
+  .tagline h3::before {
+    left: -30px;
+  }
+  
+  .tagline h3::after {
+    right: -30px;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+}

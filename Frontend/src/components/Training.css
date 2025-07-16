@@ -1,0 +1,258 @@
+.training {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #3498db;
+  margin: 15px auto 25px;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.training-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.training-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.training-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.training-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.training-card:hover .card-icon {
+  background: #3498db;
+  transform: scale(1.1);
+}
+
+.card-icon i {
+  font-size: 2.5rem;
+  color: #3498db;
+  transition: all 0.3s ease;
+}
+
+.training-card:hover .card-icon i {
+  color: white;
+}
+
+.training-card h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.training-card p {
+  color: #7f8c8d;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.course-topics {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.course-topics li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.course-topics li:last-child {
+  border-bottom: none;
+}
+
+.course-topics li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3498db;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.enroll-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.enroll-btn:hover {
+  background: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.training-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  background: white;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.feature i {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+}
+
+.feature h4 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+}
+
+.feature p {
+  color: #7f8c8d;
+  line-height: 1.7;
+}
+
+/* Decorative elements */
+.training::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(52, 152, 219, 0.05) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(52, 152, 219, 0.05) 0%,
+      transparent 20%
+    );
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .training-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .training-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .training {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-features {
+    padding: 2rem;
+  }
+}

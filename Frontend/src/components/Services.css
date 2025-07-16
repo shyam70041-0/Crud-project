@@ -1,0 +1,266 @@
+
+.services {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f4f8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(10, 25, 41, 0.05) 0%, transparent 20%);
+  z-index: 0;
+}
+
+.services .container {
+  position: relative;
+  z-index: 2;
+}
+
+.services .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services .section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A1929;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.services .section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #FFD700;
+}
+
+.services .section-title p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #FFD700;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  background: #0A1929;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover::before {
+  opacity: 0.1;
+  transform: scale(15);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.service-content {
+  position: relative;
+  z-index: 2;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  color: #0A1929;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.service-content p {
+  color: #4a5568;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.data-driven-section {
+  background: linear-gradient(135deg, #0A1929 0%, #1a365d 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.data-driven-content {
+  display: flex;
+  min-height: 400px;
+}
+
+.data-driven-text {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.data-driven-text h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+
+.data-driven-text h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #FFD700;
+}
+
+.data-driven-text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+.data-driven-image {
+  flex: 1;
+  background: url('https://www.gidapl.com/images/services.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.data-driven-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(10, 25, 41, 0.8) 0%, rgba(10, 25, 41, 0.4) 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .data-driven-content {
+    flex-direction: column;
+  }
+  
+  .data-driven-text {
+    padding: 40px;
+  }
+  
+  .data-driven-image {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 70px 0;
+  }
+  
+  .services .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .service-card {
+    padding: 30px 25px;
+  }
+  
+  .data-driven-text {
+    padding: 30px;
+  }
+  
+  .data-driven-text h3 {
+    font-size: 1.8rem;
+  }
+  
+  .data-driven-text p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services .section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .services .section-title p {
+    font-size: 1.05rem;
+  }
+  
+  .service-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .service-content p {
+    font-size: 1rem;
+  }
+  
+  .data-driven-text {
+    padding: 25px;
+  }
+  
+  .data-driven-text h3 {
+    font-size: 1.6rem;
+  }
+}
